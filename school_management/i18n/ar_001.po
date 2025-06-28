@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-25 18:25+0000\n"
+"PO-Revision-Date: 2025-06-25 18:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__div_track__type__backend
+msgid "Backend"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__content
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Content"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__create_uid
+#: model:ir.model.fields,field_description:school_management.field_div_students__create_uid
+#: model:ir.model.fields,field_description:school_management.field_div_track__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__create_date
+#: model:ir.model.fields,field_description:school_management.field_div_students__create_date
+#: model:ir.model.fields,field_description:school_management.field_div_track__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__date_of_birth
+msgid "Date Of Birth"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__description
+#: model:ir.model.fields,field_description:school_management.field_div_students__description
+#: model_terms:ir.ui.view,arch_db:school_management.div_skills_form_view
+msgid "Description"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Details"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__display_name
+#: model:ir.model.fields,field_description:school_management.field_div_students__display_name
+#: model:ir.model.fields,field_description:school_management.field_div_track__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.student_menu
+msgid "Div Students"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Email"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Enter Student Name.."
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__div_students__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__div_track__type__frontend
+msgid "Frontend"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__div_track__type__fullstack
+msgid "Fullstack"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__gender
+msgid "Gender"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__graduated
+#: model_terms:ir.ui.view,arch_db:school_management.student_search_view
+msgid "Graduated"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.student_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__id
+#: model:ir.model.fields,field_description:school_management.field_div_students__id
+#: model:ir.model.fields,field_description:school_management.field_div_track__id
+msgid "ID"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.student_search_view
+msgid "Is Graduated"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__write_uid
+#: model:ir.model.fields,field_description:school_management.field_div_students__write_uid
+#: model:ir.model.fields,field_description:school_management.field_div_track__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__write_date
+#: model:ir.model.fields,field_description:school_management.field_div_students__write_date
+#: model:ir.model.fields,field_description:school_management.field_div_track__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields.selection,name:school_management.selection__div_students__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_skills__name
+#: model:ir.model.fields,field_description:school_management.field_div_students__name
+msgid "Name"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Personal Details"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__salary
+msgid "Salary"
+msgstr ""
+
+#. module: school_management
+#: model:ir.ui.menu,name:school_management.school_management_root_menu
+msgid "School Management"
+msgstr "ادارة المدارس"
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.div_skills_action
+#: model:ir.model.fields,field_description:school_management.field_div_students__skills_ids
+#: model:ir.ui.menu,name:school_management.skills_menu
+msgid "Skills"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_students__email
+msgid "Student Email"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_student_form_view
+msgid "Student Name"
+msgstr ""
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.div_student_action
+#: model:ir.model.fields,field_description:school_management.field_div_track__student_ids
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.div_skills_action
+msgid "There are no skills to display define some."
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.div_student_action
+msgid "There are no students to display define some."
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.actions.act_window,help:school_management.div_track_action
+msgid "There are no tracks to display define some."
+msgstr ""
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_div_track
+#: model:ir.model.fields,field_description:school_management.field_div_students__track_id
+msgid "Track"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_track__name
+msgid "Track Name"
+msgstr ""
+
+#. module: school_management
+#: model:ir.actions.act_window,name:school_management.div_track_action
+#: model:ir.ui.menu,name:school_management.track_menu
+msgid "Tracks"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model.fields,field_description:school_management.field_div_track__type
+msgid "Type"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_div_skills
+msgid "div.skills"
+msgstr ""
+
+#. module: school_management
+#: model:ir.model,name:school_management.model_div_students
+msgid "div.students"
+msgstr ""
+
+#. module: school_management
+#: model_terms:ir.ui.view,arch_db:school_management.div_skills_form_view
+#: model_terms:ir.ui.view,arch_db:school_management.div_track_form_view
+msgid "name"
+msgstr ""

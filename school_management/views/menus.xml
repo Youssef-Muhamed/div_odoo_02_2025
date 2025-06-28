@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <menuitem
+            id="school_management_root_menu"
+            name="School Management"
+            web_icon="school_management,static/description/icon.png"
+            sequence="1">
+
+    </menuitem>
+
+    <menuitem
+            id="student_menu"
+            parent="school_management_root_menu"
+            name="Div Students"
+            action="div_student_action"
+            sequence="1"/>
+    <menuitem
+            id="track_menu"
+            parent="school_management_root_menu"
+            name="Tracks"
+            action="div_track_action"
+            sequence="2"/>
+    <menuitem
+            id="skills_menu"
+            parent="school_management_root_menu"
+            name="Skills"
+            action="div_skills_action"
+            sequence="3"/>
+
+</odoo>
