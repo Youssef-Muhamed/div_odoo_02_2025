@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    Server actions-->
+    <record id="action_students_set_draft" model="ir.actions.server">
+        <field name="name">Set to Draft</field>
+        <field name="model_id" ref="model_div_students"/>
+        <field name="state">code</field>
+        <!--        <field name="groups_id"  eval="[(4, ref('base.group_user'))]"/>-->
+        <field name="code">action = records._server_action_set_draft()</field>
+    </record>
+
+    <!--schedule actions (cron jobs)-->
+
+    <record id="ir_cron_students_set_tax" model="ir.cron">
+        <field name="name">Students:Set Tax </field>
+        <field name="model_id" ref="model_div_students"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_set_tax()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+    </record>
+
+</odoo>

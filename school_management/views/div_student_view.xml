@@ -9,12 +9,17 @@
             <form>
                 <header>
 
-                    <button name="action_set_draft" string="Set Draft" type="object" invisible="state in ['in_progress', 'accepted','draft']" class="btn btn-primary"/>
-                    <button name="action_set_in_progress" string="In Progress" type="object" invisible="state in ['in_progress', 'accepted','cancelled']" class="btn btn-primary"/>
-                    <button name="action_set_accepted" string="Accepted" type="object" invisible="state in ['draft', 'accepted','cancelled']" class="btn btn-primary"/>
-                    <button name="action_set_canceled" string="Cancelled" type="object" invisible="state in ['cancelled']" class="btn btn-primary"/>
-<!--                    options="{'clickable': '1'}"-->
-                    <field name="state" widget="statusbar"  statusbar_visible="draft,in_progress,accepted"/>
+                    <button name="action_set_draft" string="Set Draft" type="object"
+                            invisible="state in ['in_progress', 'accepted','draft']" class="btn btn-primary"/>
+                    <button name="action_set_in_progress" string="In Progress" type="object"
+                            invisible="state in ['in_progress', 'accepted','cancelled']" class="btn btn-primary"/>
+                    <button name="action_set_accepted" string="Accepted"
+                            groups="school_management.student_manager_group" type="object"
+                            invisible="state in ['draft', 'accepted','cancelled']" class="btn btn-primary"/>
+                    <button name="action_set_canceled" string="Cancelled" type="object"
+                            invisible="state in ['cancelled']" class="btn btn-primary"/>
+                    <!--                    options="{'clickable': '1'}"-->
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,accepted"/>
                 </header>
                 <sheet>
                     <label for="name" string="Student Name"/>
@@ -38,7 +43,7 @@
                             <field name="graduated"/>
                             <field name="description"/>
                             <field name="tax"/>
-                            <field name="net_salary"/>
+                            <field name="net_salary" groups="school_management.student_manager_group"/>
                             <!--                            <field name="new_salary"/>-->
 
                         </group>
@@ -49,7 +54,7 @@
                         </page>
                     </notebook>
                 </sheet>
-                <chatter />
+                <chatter/>
             </form>
         </field>
     </record>
@@ -67,6 +72,8 @@
                 <field name="graduated"/>
                 <field name="salary" optional="hide"/>
                 <field name="description"/>
+                <field name="tax"/>
+                <field name="state"/>
             </list>
         </field>
 
@@ -107,7 +114,7 @@
         <field name="res_model">div.students</field>
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="div_student_list_view"/>
-        <field name="context">{'search_default_group_by_graduated': 1}</field>
+<!--        <field name="context">{'search_default_group_by_graduated': 1}</field>-->
         <field name="help" type="html">
             <p>
                 There are no students to display define some.

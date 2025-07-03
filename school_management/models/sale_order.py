@@ -14,3 +14,10 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self)._prepare_confirmation_values()
         del res['date_order']
         return res
+
+    def action_quotation_sent(self):
+        """
+            override this method to add custom code
+        """
+        print('--------> action_quotation_sent')
+        return super().action_quotation_sent()

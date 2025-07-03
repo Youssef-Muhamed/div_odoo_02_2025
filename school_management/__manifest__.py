@@ -5,7 +5,9 @@
     """,
     'depends': ['base','mail','sale'],
     'data': [
-
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'data/ir_action_data.xml',
         'views/div_student_view.xml',
         'views/div_track_view.xml',
         'views/div_skills_view.xml',
@@ -14,4 +16,7 @@
 
     ],
     'license': 'OEEL-1',
+    'application': True,
+    'installable': True,
+    'sequence': 1
 }

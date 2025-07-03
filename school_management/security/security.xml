@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        <record id="div_student_group" model="ir.model.access">-->
+        <!--            <field name="name">Div Students</field>-->
+        <!--            <field name="model">div.students</field>-->
+        <!--            <field name="perm_read">1</field>-->
+        <!--            <field name="perm_write">1</field>-->
+        <!--            <field name="perm_create">1</field>-->
+        <!--            <field name="perm_unlink">1</field>-->
+        <!--        </record>-->
+        <record id="school_management_category" model="ir.module.category">
+            <field name="name">School Management</field>
+            <field name="description">Helps you handle your school.</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <!--        <record id="base.module_category_sales_sales" model="ir.module.category">-->
+        <!--            <field name="description">Helps you handle your school.</field>-->
+        <!--            <field name="sequence">1</field>-->
+        <!--        </record>-->
+
+        <record id="student_user_group" model="res.groups">
+            <field name="name">Div Students</field>
+            <field name="category_id" ref="school_management.school_management_category"/>
+        </record>
+        <record id="student_manager_group" model="res.groups">
+            <field name="name">Div Manager</field>
+            <field name="category_id" ref="school_management.school_management_category"/>
+            <field name="implied_ids" eval="[(6, 0, [ref('school_management.student_user_group')])]"/>
+            <!--            <field name="implied_ids" eval="[(5, 0, 0)]"/>-->
+        </record>
+
+        <!--        From openerp/osv/fields.py-->
+        <!--# Values: (0, 0, { fields }) create-->
+        <!--# (1, ID, { fields }) update (write fields to ID)-->
+        <!--# (2, ID) remove (calls unlink on ID, that will also delete the relationship because of the ondelete)-->
+        <!--# (3, ID) unlink (delete the relationship between the two objects but does not delete ID)-->
+        <!--# (4, ID) link (add a relationship)-->
+        <!--# (5, ID) unlink all-->
+        <!--# (6, ?, ids) set a list of links-->
+
+        <record id="div_student_rule" model="ir.rule">
+            <field name="name">Div Students</field>
+            <field name="model_id" ref="model_div_students"/>
+            <field name="domain_force">[('create_uid','=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('school_management.student_user_group'))]"/>
+        </record>
+
+        <record id="div_student_manager_rule" model="ir.rule">
+            <field name="name">Div Students</field>
+            <field name="model_id" ref="model_div_students"/>
+            <field name="domain_force">[(1,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('school_management.student_manager_group'))]"/>
+        </record>
+
+    </data>
+</odoo>

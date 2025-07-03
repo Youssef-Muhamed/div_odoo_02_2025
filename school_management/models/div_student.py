@@ -19,6 +19,7 @@ class DivStudent(models.Model):
     salary = fields.Float()
     tax = fields.Float()
     net_salary = fields.Float(compute='_compute_net_salary', store=True, )
+    # company_id = fields.Many2one('res.company', default=lambda self: self.env.company)
 
     # new_salary = fields.Float(compute='_compute_new_salary',store=True)
     @api.depends('salary', 'tax')
@@ -100,8 +101,22 @@ class DivStudent(models.Model):
         res = super(DivStudent, self).copy(default)
         return res
 
+    def _server_action_set_draft(self):
+        for rec in self:
+            rec.action_set_draft()
+
+    def _cron_set_tax(self):
+        print('--------> _cron_set_tax')
+        for rec in self:
+            rec.tax = 0.10
+
 
 # Inheritance
 #1 python inheritance
 #2 class inheritance
 #3 view inheritance
+
+# security levels
+# 1. model level
+# 2 record level
+# 3 field level
