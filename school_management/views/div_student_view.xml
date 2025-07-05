@@ -16,8 +16,19 @@
                     <button name="action_set_accepted" string="Accepted"
                             groups="school_management.student_manager_group" type="object"
                             invisible="state in ['draft', 'accepted','cancelled']" class="btn btn-primary"/>
+
+<!--                    <button name="%(create_track_wizard_act_window)d" string="Create Track" type="action"-->
+<!--                            class="btn btn-primary"/>-->
                     <button name="action_set_canceled" string="Cancelled" type="object"
                             invisible="state in ['cancelled']" class="btn btn-primary"/>
+
+
+                    <button name="action_create_track" string="Create Track" type="object"
+                             class="btn btn-primary"/>
+
+<!--                    <button name="action_create_skills" string="Create Skills" type="object"-->
+<!--                             class="btn btn-primary"/>-->
+
                     <!--                    options="{'clickable': '1'}"-->
                     <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,accepted"/>
                 </header>

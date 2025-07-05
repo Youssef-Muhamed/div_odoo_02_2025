@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="create_track_wizard_form_view" model="ir.ui.view">
+            <field name="name">create_track_wizard.form</field>
+            <field name="model">create.track.wizard</field>
+            <field name="arch" type="xml">
+                <form string="ModelTitle">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="track_name"/>
+                            </group>
+                            <group>
+                                <field name="track_type"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="create_track" string="Create Track" type="object" class="btn-primary"/>
+                        <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="x" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="create_track_wizard_act_window" model="ir.actions.act_window">
+            <field name="name">Create Track</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">create.track.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>

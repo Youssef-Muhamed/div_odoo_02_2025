@@ -5,3 +5,4 @@ class DivSkills(models.Model):
 
     name = fields.Char()
     description = fields.Text()
+

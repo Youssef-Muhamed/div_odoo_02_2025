@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_div_student,Div Student,model_div_students,school_management.student_user_group,1,1,1,1
 access_div_skills,Div Skills,model_div_skills,,1,1,1,1
 access_div_track,Div Track,model_div_track,,1,1,1,1
+access_create_track_wizard,create_track_wizard,model_create_track_wizard,,1,1,1,1

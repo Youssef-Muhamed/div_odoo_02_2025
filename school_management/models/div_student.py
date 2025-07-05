@@ -105,12 +105,40 @@ class DivStudent(models.Model):
         for rec in self:
             rec.action_set_draft()
 
+
     def _cron_set_tax(self):
         print('--------> _cron_set_tax')
         for rec in self:
             rec.tax = 0.10
 
+    def action_create_track(self):
+        # action = self.env.ref('school_management.create_track_wizard_act_window').read()[0]
+        # action['context'] = {
+        #     'default_track_name': 'New Track',
+        #     'default_track_type': 'backend',
+        # }
+        # print(action)
+        #
+        # return action
 
+        action = {
+            'type': 'ir.actions.act_window',
+            'name': 'Create Track',
+            'view_mode': 'form',
+            'res_model': 'create.track.wizard',
+            'target': 'new',
+        }
+        return action
+
+    # def action_create_skills(self):
+    #     action = {
+    #         'type': 'ir.actions.act_window',
+    #         'name': 'Create Skills',
+    #         'view_mode': 'form',
+    #         'res_model': 'div.skills',
+    #         'target': 'new',
+    #     }
+    #     return action
 # Inheritance
 #1 python inheritance
 #2 class inheritance
@@ -120,3 +148,8 @@ class DivStudent(models.Model):
 # 1. model level
 # 2 record level
 # 3 field level
+
+# models
+# 1. odoo models
+# 2. Transient models
+# 3. Abstract models
