@@ -10,6 +10,9 @@
         'data/ir_action_data.xml',
         'wizard/create_track_wizard_view.xml',
 
+        'report/template.xml',
+        'report/report.xml',
+
         'views/div_student_view.xml',
         'views/div_track_view.xml',
         'views/div_skills_view.xml',
