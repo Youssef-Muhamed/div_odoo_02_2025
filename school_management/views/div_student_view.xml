@@ -25,6 +25,8 @@
 
                     <button name="action_create_track" string="Create Track" type="object"
                              class="btn btn-primary"/>
+                    <button name="action_get_products" string="Get products api" type="object"
+                             class="btn btn-primary"/>
 
 <!--                    <button name="action_create_skills" string="Create Skills" type="object"-->
 <!--                             class="btn btn-primary"/>-->

@@ -2,7 +2,87 @@
 <odoo>
     <template id="div_student_template">
         <t t-call="web.html_container">
-            <h1>Student</h1>
+            <t t-foreach="docs" t-as="student">
+                <t t-call="web.external_layout">
+                    <h1>Student Information</h1>
+                    <h5 style="font-weight: bold;color: red ">Name:
+                        <t t-esc="student.name"/>
+                    </h5>
+                    <h5>Email:
+                        <t t-esc="student.email"/>
+                    </h5>
+                    <h5>Gender:
+                        <t t-esc="student.gender"/>
+                    </h5>
+                    <h5>Track:
+                        <t t-esc="student.track_id.name"/>
+                    </h5>
+                    <br/>
+                    <h3 style="font-weight: bold ; text-align: center">Skills</h3>
+                    <table class="table" border="1">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="student.skills_ids" t-as="skill">
+                                <tr>
+                                    <th scope="row">
+                                        <t t-esc="skill_index + 1"/>
+                                    </th>
+                                    <t t-if="skill_index == 0">
+                                        <td style="color: red ">
+                                            <t t-esc="skill.name"/>
+                                        </td>
+                                    </t>
+                                    <t t-else="">
+                                        <td>
+                                            <t t-esc="skill.name"/>
+                                        </td>
+                                    </t>
+                                    <td>
+                                        <t t-esc="skill.description"/>
+                                    </td>
+                                </tr>
+                            </t>
+
+                        </tbody>
+                    </table>
+
+                    <h3 style="font-weight: bold ; text-align: center">All Tracks</h3>
+                    <table class="table" border="1">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Track</th>
+                                <th scope="col">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="tracks" t-value="request.env['div.track'].search([])"/>
+                            <t t-foreach="tracks" t-as="track">
+                                <tr>
+                                    <th scope="row">
+                                        <t t-esc="track_index + 1"/>
+                                    </th>
+                                    <td>
+                                        <t t-esc="track.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="track.type"/>
+                                    </td>
+                                </tr>
+                            </t>
+
+                        </tbody>
+                    </table>
+
+                </t>
+
+            </t>
         </t>
     </template>
 </odoo>

@@ -3,7 +3,7 @@ from reportlab.graphics.transform import inverse
 from odoo import models, fields, api, _
 from datetime import datetime
 from odoo.exceptions import ValidationError
-
+import requests
 
 class DivStudent(models.Model):
     _name = 'div.students'
@@ -139,6 +139,17 @@ class DivStudent(models.Model):
     #         'target': 'new',
     #     }
     #     return action
+
+    def action_get_products(self):
+        posts = requests.get('https://dummyjson.com/products')
+        print('--------> posts',posts.json())
+        return posts
+
+
+
+
+
+
 # Inheritance
 #1 python inheritance
 #2 class inheritance
